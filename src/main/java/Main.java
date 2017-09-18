@@ -6,7 +6,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-
         String[] products = {"ru.bstu.iitus.vt41.davydov_vv.RubickCube", "ru.bstu.iitus.vt41.davydov_vv.Cheese", "ru.bstu.iitus.vt41.davydov_vv.Camera", "ru.bstu.iitus.vt41.davydov_vv.Tv"};
 
         Scanner scanner = new Scanner(System.in);
