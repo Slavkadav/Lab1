@@ -18,7 +18,8 @@ public class Main {
 
         int type;
         try {
-            for (int i = 0; i < productNum; i++) {
+            int i = 0;
+            while (i < productNum) {
                 System.out.println("Выберите тип товара");
                 System.out.println("1 - кубик Рубика");
                 System.out.println("2 - сыр");
@@ -26,8 +27,13 @@ public class Main {
                 System.out.println("4 - телевизор");
                 type = scanner.nextInt();
                 scanner.nextLine();
-                array[i] = (Product) Class.forName(products[type - 1]).newInstance();
-                array[i].init(scanner);
+                if (type >= 1 && type <= 4) {
+                    array[i] = (Product) Class.forName(products[type - 1]).newInstance();
+                    array[i].init(scanner);
+                    i++;
+                } else {
+                    System.out.println("Вы допустили ошибку при вводе");
+                }
             }
         } catch (InstantiationException e) {
             e.printStackTrace();
